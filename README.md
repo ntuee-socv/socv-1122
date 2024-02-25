@@ -36,4 +36,4 @@
 # GV's API & Tutorial
 - For GV usage, please check the document in [doc/GV_tutorial.pdf](https://github.com/ntuee-socv/socv-1122/blob/main/doc/GV_tutorial.pdf) 
 
-If you have any problem, please contact us. (TA email  : socv1122@googlegroups.com)
+If you have any problem, please contact us. (TA email  : ntueesocv@googlegroups.com)

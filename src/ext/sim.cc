@@ -200,9 +200,9 @@ struct randomSim : public Pass {
                     ofs << "	top.p_" << reset_name << ".set<bool>(false);\n";
                 }
                 if (reset_n_set) {
-                    ofs << "	top.p_" << reset_name << ".set<bool>(false);\n";
+                    ofs << "	top.p_" << reset_n_name << ".set<bool>(false);\n";
                     ofs << "else\n";
-                    ofs << "	top.p_" << reset_name << ".set<bool>(true);\n";
+                    ofs << "	top.p_" << reset_n_name << ".set<bool>(true);\n";
                 }
             }
 

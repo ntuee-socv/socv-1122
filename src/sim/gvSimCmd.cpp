@@ -45,18 +45,18 @@ GVRandomSimCmd ::exec(const string& option) {
             command += " -v ";
             continue;
         }
-        if (myStrNCmp("-rst", token, 3) == 0) {
-            rst_set = true;
-            ++i;
-            rst = options[i];
-            command += " -reset " + rst;
-            continue;
-        }
         if (myStrNCmp("-rst_n", token, 4) == 0) {
             rst_n_set = true;
             ++i;
             rst_n = options[i];
             command += " -reset_n " + rst_n;
+            continue;
+        }
+        if (myStrNCmp("-rst", token, 3) == 0) {
+            rst_set = true;
+            ++i;
+            rst = options[i];
+            command += " -reset " + rst;
             continue;
         }
         if (myStrNCmp("-clk", token, 1) == 0) {

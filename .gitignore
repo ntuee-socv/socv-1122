@@ -25,6 +25,4 @@ yosys-config
 compile_commands.json
 
 # design and log files
-*.aig
-*.v
 *.txt

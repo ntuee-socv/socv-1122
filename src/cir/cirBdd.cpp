@@ -53,8 +53,7 @@ CirMgr::setBddOrder(const bool& file) {
 
 void CirMgr::buildNtkBdd() {
     // TODO: build BDD for ntk here
-    // Perform DFS traversal from DFF inputs, inout, and output gates.
-    // Collect ordered nets to a GVNetVec
+    // Perform DFS traversal from DFF inputs, and output gates.
     // Construct BDDs in the DFS order
 }
 

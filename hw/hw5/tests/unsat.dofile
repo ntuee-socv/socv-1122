@@ -1,0 +1,5 @@
+# Please change the file name below
+cirread -aig ./design/SoCV/hwmcc/pdtpmsfpmult.aig
+set sys vrf
+satv itp -o 0
+quit -f

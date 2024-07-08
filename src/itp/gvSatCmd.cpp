@@ -118,10 +118,14 @@ SATVerifyBmcCmd::exec(const string& option) {
             return GVCmdExec::errorOption(GV_CMD_OPT_ILLEGAL, options[1]);
         }
         monitorName = cirMgr->getPo(num)->getName();
-        gate        = cirMgr->getPo(num)->getIn0Gate();
+        gate        = cirMgr->getPo(num);
     }
     // get PO's input, since the PO is actually a redundant node and should be removed
-    satMgr->verifyPropertyBmc(monitorName, gate);
+    CirGate* monitor = new CirAigGate(cirMgr->getNumTots(), 0);
+    cirMgr->addTotGate(monitor);
+    monitor->setIn0(gate->getIn0Gate(), gate->getIn0().isInv());
+    monitor->setIn1(cirMgr->_const1, false);
+    satMgr->verifyPropertyBmc(monitorName, monitor);
 
     return GV_CMD_EXEC_DONE;
 }
